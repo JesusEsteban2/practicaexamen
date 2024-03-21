@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        binding.balance.text=Movimiento().sumaCantidad(binding.root.context).toString()
         dataSet =Movimiento().queryAll(binding.root.context)
         updateView(dataSet,adapter)
     }

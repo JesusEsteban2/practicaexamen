@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".20"
+        app:layout_constraintGuide_percent=".40"
         />
 
     <androidx.constraintlayout.widget.Guideline
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".50"
+        app:layout_constraintGuide_percent=".70"
         />
 
     <ImageView
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="500000"
+        android:text=""
         android:layout_marginLeft="5dp"
         app:layout_constraintStart_toEndOf="@+id/simbolIcon"
         app:layout_constraintTop_toTopOf="@+id/simbolIcon"
@@ -46,7 +46,7 @@
         android:id="@+id/cantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5000000"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/vertical_line1"
         app:layout_constraintEnd_toEndOf="@+id/vertical_line2"
         app:layout_constraintTop_toTopOf="@+id/simbolIcon"
@@ -56,7 +56,7 @@
         android:id="@+id/fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="500"
+        android:text=""
         android:layout_marginLeft="5dp"
         app:layout_constraintStart_toEndOf="@+id/vertical_line2"
         app:layout_constraintEnd_toEndOf="parent"

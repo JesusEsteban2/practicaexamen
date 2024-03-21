@@ -4,6 +4,7 @@ package com.example.preacticaexamen.activities.adapter
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
+import com.example.practicaexamen.R
 import com.example.practicaexamen.activities.Datos.Movimiento
 import com.example.practicaexamen.activities.activities.MainActivity.Companion.dataSet
 import com.example.practicaexamen.databinding.MoveListBinding
@@ -59,7 +60,13 @@ class ReViewHolder(val binding: MoveListBinding) :
     fun render(mov: Movimiento) {
 
         //Visualiza el contenido de la receta.
-        binding.identi.setText(mov.id)
+        if (mov.cantidad>0) {
+            binding.simbolIcon.setImageDrawable(binding.root.context.getDrawable(R.drawable.add_24))
+        }else {
+            binding.simbolIcon.setImageDrawable(binding.root.context.getDrawable(R.drawable.less_24))
+        }
+
+        binding.identi.setText(mov.id.toString())
         binding.cantidad.setText(mov.cantidad.toString())
         binding.fecha.setText(mov.fecha.toString())
     }

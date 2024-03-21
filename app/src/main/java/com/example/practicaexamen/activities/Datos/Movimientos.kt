@@ -1,14 +1,15 @@
 package com.example.practicaexamen.activities.Datos
 
 import android.content.Context
+import android.util.Log
 
 class Movimiento () {
 
     var id:Int=0
     var cantidad:Float=0F
-    var fecha:Float=0F
+    var fecha:String=""
 
-    constructor(i:Int,c:Float,f:Float) : this() {
+    constructor(i:Int,c:Float,f:String) : this() {
         id=i
         cantidad=c
         fecha=f
@@ -25,7 +26,7 @@ class Movimiento () {
         var ok:Boolean=false
 
         ok = db.insertMovimiento(m)
-
+        Log.i("DATOS", "La insercción ha sido " + ok.toString())
         return ok
     }
 

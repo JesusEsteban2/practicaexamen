@@ -144,7 +144,7 @@ class Database (context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null,D
 
         while (c.moveToNext()) {
             val m=Movimiento(c.getInt(0),c.getFloat(1),
-                c.getFloat(2))
+                c.getString(2))
             lm.add(m)
         }
 
@@ -172,11 +172,11 @@ class Database (context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null,D
 
     companion object {
         const val DATABASE_NAME="Movimientos.db"
-        const val DATABASE_VERSION=2
+        const val DATABASE_VERSION=1
         const val TABLE_NAME="Importes"
         const val SQL_DELETE_TABLE_MOV="DROP TABLE IF EXISTS $TABLE_NAME"
         const val SQL_CREATE_ENTRIES_MOV ="CREATE TABLE $TABLE_NAME "+
-                "(Id INTEGER PRIMARY KEY AUTOINCREMENT,cantidad FLOAT,fecha FLOAT)"
+                "(Id INTEGER PRIMARY KEY AUTOINCREMENT,cantidad FLOAT,fecha String)"
         val SQL_MOV_COLUMS:List<String> = listOf("cantidad","fecha")
     }
 }
