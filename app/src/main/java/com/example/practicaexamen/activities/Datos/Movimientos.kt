@@ -2,7 +2,17 @@ package com.example.practicaexamen.activities.Datos
 
 import android.content.Context
 
-class Movimiento (var id:Int,var cantidad:Float,var fecha:Float) {
+class Movimiento () {
+
+    var id:Int=0
+    var cantidad:Float=0F
+    var fecha:Float=0F
+
+    constructor(i:Int,c:Float,f:Float) : this() {
+        id=i
+        cantidad=c
+        fecha=f
+    }
 
     /**
      * Función para insertar una lista de Movimientos en la BBDD

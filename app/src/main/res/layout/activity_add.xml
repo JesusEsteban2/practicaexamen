@@ -5,33 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.activities.MainActivity">
+    tools:context=".activities.activities.AddActivity">
 
-    <TextView
-        android:id="@+id/balance"
+    <EditText
+        android:id="@+id/cant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <Button
-        android:id="@+id/addMovimiento"
+    <EditText
+        android:id="@+id/fec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        app:layout_constraintStart_toEndOf="@id/balance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/balance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cant"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reciclerW"
+    <Button
+        android:id="@+id/guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/balance"
-        app:layout_constraintTop_toBottomOf="@+id/balance"
-    />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fec"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

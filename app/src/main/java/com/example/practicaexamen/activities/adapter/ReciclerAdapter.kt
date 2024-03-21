@@ -4,6 +4,8 @@ package com.example.preacticaexamen.activities.adapter
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
+import com.example.practicaexamen.activities.Datos.Movimiento
+import com.example.practicaexamen.activities.activities.MainActivity.Companion.dataSet
 import com.example.practicaexamen.databinding.MoveListBinding
 
 
@@ -43,7 +45,7 @@ class ReciclerAdapter (val onClickListener: (position:Int) -> Unit ) :
      * Actualiza los valores del dataset utilizado para el ReciclerView
      * Notifica el cambio de los datos para que se actualice la visualización
      */
-    fun updateItems(results: List<DaoReceta>) {
+    fun updateItems(results: List<Movimiento>) {
         dataSet = results
         notifyDataSetChanged()
     }
@@ -54,19 +56,12 @@ class ReciclerAdapter (val onClickListener: (position:Int) -> Unit ) :
 class ReViewHolder(val binding: MoveListBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun render(receta: DaoReceta) {
+    fun render(mov: Movimiento) {
 
         //Visualiza el contenido de la receta.
-        binding.recipeName.setText(receta.name)
-        binding.prepTimeMin.setText(receta.prepTimeMin.toString())
-        binding.reCookTime.setText(receta.cookTimeMin.toString())
-        var ra:Float=0F
-
-
-        binding.recipeDifficulty.text=receta.difficulty
-
-        binding.recipeRating.rating=receta.rating.toFloat()
-
+        binding.identi.setText(mov.id)
+        binding.cantidad.setText(mov.cantidad.toString())
+        binding.fecha.setText(mov.fecha.toString())
     }
 
 
