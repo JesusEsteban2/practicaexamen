@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         // Asignar el adapter al reciclerView
         binding.reciclerW.adapter = adapter
         binding.reciclerW.layoutManager = LinearLayoutManager(this)
-
+        binding.balance.text=saldo.toString()
+        binding.addMovimiento.setOnClickListener({onClickAdd()})
     }
 
     override fun onResume() {
@@ -52,6 +53,15 @@ class MainActivity : AppCompatActivity() {
      * pantalla de detalle (DetaidActivity) de dicho elemento.
      */
     fun onClick(posi:Int){
+        return
+    }
+
+    /**
+     * Función OnClick para añadir movimiento
+     *
+     * pantalla de detalle (DetaidActivity) de dicho elemento.
+     */
+    fun onClickAdd(){
         val intent = Intent(this, AddActivity::class.java)
         startActivity(intent)
     }
